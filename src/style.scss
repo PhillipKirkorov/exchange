@@ -1,0 +1,150 @@
+$colors: red, orange, yellow, green, blue, purple;
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&display=swap');
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.content{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    &__operation{
+        overflow-x: auto !important;
+        display: flex;
+        margin: 20px;
+        width: 80%;
+        flex-direction: column;
+        position: relative;
+        &__operator{
+            width: 100%;
+            position: absolute;
+            top: 50px;
+            left: 30%;
+            height: 100px;
+            width: 50%;
+            background-color: #fff;
+            border: 2px solid #bdbdbd;
+            &--notate{
+                margin-top: 20px;
+                margin-bottom: 10px;
+                font-size: 14px;
+                color: #50a7ff;
+            }
+            &--button{
+                margin-top: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        &__unit{
+            padding: 20px;
+            border-bottom: 1px solid #bdbdbd;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            &__description{
+                color: #959595;
+                font-weight: 600;
+                font-size: 18px;
+            }
+            &__amount{
+                font-size: 22px;
+            }
+        }
+        &__total{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #bdbdbd;
+            height: 50px;
+            &__menu{
+                    display: flex;
+                    flex-direction: row;                
+                    
+            }
+            &--title{
+                font-size: 30px;
+            }&--amount{
+                font-size: 30px;
+                color: #50a7ff;
+            }
+        }
+    }
+    &__menu{
+        width: 20%;
+        background-color: #fafbfb;
+        height: 100vh;
+        padding: 20px;
+        &--title{
+            font-size: 25px;
+        }
+    }
+}
+
+.wallet-box{
+    border: 2px solid #f4f4f4;
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    margin-top: 20px;
+    transition: .2s;
+    cursor: pointer;
+    select{
+        height: 45px;
+        border: 1px solid #fff;
+        outline:none;
+    }
+    &--active{
+        border: 2px solid #64b0ff;
+        transition: .2s;
+    }
+    &__curr{
+        color: #babdbf;
+    }
+    &--dashed{
+        border: 2px dashed #f4f4f4;
+    }
+    &--add{
+        color: green;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+        cursor: pointer;
+
+    }
+    
+}
